@@ -1,0 +1,31 @@
+<% @page_title = "Player List"%>
+
+<div class="player list">
+  <h2>Players</h2>
+  
+	<%= link_to("Add New Player", {:action => 'new'}, :class => 'action new') %>
+
+	<div><%= pluralize(@players.size, 'player') %> found </div>
+  <table class="listing" summary="Player list">
+    <tr class="header">
+      <th>&nbsp;</th>
+      <th>Player</th>
+      <th>Paid</th>
+      <th>Email</th>
+      <th>Actions</th>
+    </tr>
+    <% @players.each do |player| %>
+    <tr class="<%= cycle('odd', 'even') %>">
+      <td></td>
+      <td><%= player.username %></td>
+      <td class="center"><%= status_tag(player.paid)%></td>
+      <td class="center"><%= player.email %></td>
+      <td class="actions">
+        <%= link_to("Show", {:action => 'show', :id => player.id}, :class => 'action show') %>
+        <%= link_to("Edit", {:action => 'edit', :id => player.id}, :class => 'action edit') %>
+        <%= link_to("Delete", {:action => 'delete', :id => player.id}, :class => 'action delete') %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+</div>

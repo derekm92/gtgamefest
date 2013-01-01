@@ -1,0 +1,13 @@
+Gamefest CMS v1.0
+By: Derek Miller
+derekm@gatech.edu
+
+This is a Ruby on Rails overhaul of the GT Gamefest website. GT Gamefest is the semi annual gaming LAN party event held in the Georgia Tech College of Computing.
+
+Site features [will] include:
+1. Ability for users to register
+2. Ability for users to register for tournaments
+3. Admin control panel to manage user accounts
+4. Admin ability to manage tournaments
+5. Admin ability to toggle users as "paid" or "unpaid" as they pay tournament entry fees
+6. Admin text announce on the home page
